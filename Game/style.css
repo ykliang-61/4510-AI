@@ -1,0 +1,175 @@
+/* Shared story/calculator design tokens. All component styles below are scoped. */
+:root {
+  --pixel-bg: #cce8ef;
+  --pixel-panel: #fffdf5;
+  --pixel-pink: #f5c8d9;
+  --pixel-purple: #d7cff2;
+  --pixel-green: #c9e5bd;
+  --pixel-navy: #263553;
+  --pixel-muted: #546078;
+  --pixel-border-width: 2px;
+  --pixel-panel-shadow: 8px 8px 0 #789daa;
+  --pixel-radius: 0;
+  --pixel-space: 24px;
+  --pixel-heading-font: 'Courier New', monospace;
+  --pixel-body-font: Verdana, Arial, sans-serif;
+}
+#internship-game {
+  --ink: var(--pixel-navy);
+  --paper: var(--pixel-panel);
+  --blue: var(--pixel-bg);
+  --pink: var(--pixel-pink);
+  --purple: var(--pixel-purple);
+  --green: var(--pixel-green);
+  --line: var(--pixel-border-width) solid var(--ink);
+  padding: 1px 0;
+  isolation: isolate;
+  container: internship / inline-size;
+}
+#internship-game button, #internship-game .button, #internship-game .desktop { border-radius: var(--pixel-radius); }
+#internship-game *{box-sizing:border-box}
+#internship-game{margin:0;background:var(--blue);color:var(--ink);font-family:var(--pixel-body-font);font-size:16px;line-height:1.6;background-image:radial-gradient(#8ab8c5 0.7px,transparent .7px);background-size:12px 12px}
+#internship-game button, #internship-game a{-webkit-tap-highlight-color:transparent}
+#internship-game button{font:inherit;color:inherit;cursor:pointer}
+#internship-game button:focus-visible, #internship-game a:focus-visible{outline:3px solid #6c4298;outline-offset:5px}
+#internship-game button:disabled{cursor:default}
+#internship-game button, #internship-game .button{border:var(--line);background:var(--paper);padding:14px 18px;box-shadow:4px 4px 0 var(--ink);text-align:left;transition:transform .12s,box-shadow .12s;text-decoration:none;color:var(--ink);font-weight:bold;font-size:15px;display:block}
+#internship-game button:hover:not(:disabled), #internship-game .button:hover{transform:translate(-1px,-1px);box-shadow:5px 5px 0 var(--ink)}
+#internship-game button:active:not(:disabled){transform:translate(3px,3px);box-shadow:1px 1px 0 var(--ink)}
+#internship-game .primary{background:var(--purple)}
+#internship-game .secondary{background:var(--green)}
+#internship-game .masthead{max-width:1120px;margin:30px auto 22px;display:flex;align-items:center;justify-content:space-between;font:12px monospace;letter-spacing:1px;padding:0 16px}
+#internship-game .masthead a{font:bold 26px monospace;color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px}
+#internship-game .masthead a span{font:bold 12px monospace;letter-spacing:2px}
+#internship-game .desktop{max-width:1088px;margin:auto;border:var(--line);box-shadow:var(--pixel-panel-shadow);background:var(--paper)}
+#internship-game .window-bar{background:var(--pink);border-bottom:var(--line);padding:10px 17px;display:flex;justify-content:space-between;font:14px monospace}
+#internship-game .window-bar i{display:inline-block;width:10px;height:10px;background:var(--paper);border:var(--line);margin-right:8px}
+#internship-game .game-layout{display:grid;grid-template-columns:43% 57%;min-height:620px}
+#internship-game .scene-panel{background:#e6edf1;border-right:var(--line);padding:var(--pixel-space);display:flex;flex-direction:column}
+#internship-game .scene-label{display:flex;justify-content:space-between;font:12px monospace;letter-spacing:.5px;margin-bottom:15px}
+#internship-game .illustration{height:280px;position:relative;border:var(--line);overflow:hidden;background:#ece0e9;isolation:isolate}
+#internship-game .office-window{position:absolute;left:8%;top:24px;width:66%;height:142px;border:4px solid var(--ink);background:#c2e3ef;box-shadow:4px 4px 0 #c6b4d3;overflow:hidden}
+#internship-game .office-window:after{content:'';position:absolute;top:0;bottom:0;left:50%;width:4px;background:var(--ink)}
+#internship-game .skyline{position:absolute;bottom:0;width:100%;height:90px;display:flex;align-items:flex-end;gap:7px;padding:0 5px}
+#internship-game .skyline i{width:20%;height:70%;background:repeating-linear-gradient(0deg,transparent 0 12px,#b3d1db 12px 16px),#88a8c2;border:2px solid #6d8aa7}
+#internship-game .skyline i:nth-child(2){height:100%;clip-path:polygon(50% 0,100% 20%,100% 100%,0 100%,0 20%)}
+#internship-game .skyline i:nth-child(3){height:55%}
+#internship-game .skyline i:nth-child(5){height:90%}
+#internship-game .cloud{position:absolute;background:#fffdf5;width:48px;height:12px;top:18px;left:14px;box-shadow:10px -7px 0 #fffdf5}
+#internship-game .cloud-two{left:145px;top:30px;width:30px}
+#internship-game .wall-note{position:absolute;right:12px;top:98px;font:bold 9px monospace;background:#f9e8a9;padding:10px 6px;transform:rotate(5deg);box-shadow:2px 2px #b6a9b9}
+#internship-game .clock{position:absolute;top:24px;right:17px;border:3px solid var(--ink);width:33px;height:33px;border-radius:50%;background:var(--paper)}
+#internship-game .clock:after{content:'';position:absolute;width:9px;height:10px;border-left:2px solid var(--ink);border-bottom:2px solid var(--ink);left:12px;top:5px}
+#internship-game .floor{position:absolute;bottom:0;height:64px;background:#c7c3d8;border-top:var(--line);width:100%;z-index:-1}
+#internship-game .avatar{position:absolute;bottom:60px;left:50%;width:60px;height:115px}
+#internship-game .face{position:absolute;background:#e7b095;border:3px solid var(--ink);width:43px;height:44px;top:12px;left:8px}
+#internship-game .face:after{content:'';position:absolute;width:4px;height:5px;background:var(--ink);left:7px;top:15px;box-shadow:18px 0 var(--ink)}
+#internship-game .face i{position:absolute;bottom:6px;left:13px;width:9px;height:2px;background:var(--ink)}
+#internship-game .hair{position:absolute;top:3px;left:3px;width:51px;height:29px;background:var(--ink);z-index:2;clip-path:polygon(10% 0,90% 0,100% 25%,100% 100%,78% 100%,78% 55%,22% 55%,22% 100%,0 100%,0 25%)}
+#internship-game .body{position:absolute;top:54px;width:60px;height:57px;background:#a0b798;border:3px solid var(--ink)}
+#internship-game .body span{position:absolute;left:24px;top:0;height:25px;width:3px;background:#f7e6a4}
+#internship-game .body span:after{content:'';position:absolute;top:21px;left:-4px;width:12px;height:15px;border:2px solid var(--ink);background:var(--paper)}
+#internship-game .desk{position:absolute;bottom:47px;height:14px;border:3px solid var(--ink);background:#d8ae99;width:82%;left:9%}
+#internship-game .desk:before, #internship-game .desk:after{content:'';position:absolute;top:11px;width:7px;height:35px;background:var(--ink)}
+#internship-game .desk:after{right:8px}
+#internship-game .desk:before{left:8px}
+#internship-game .laptop{position:absolute;bottom:10px;left:25%;height:47px;width:84px;background:#b4bbd4;border:3px solid var(--ink);box-shadow:3px 4px 0 var(--ink);display:grid;place-items:center}
+#internship-game .laptop span{font:8px monospace}
+#internship-game .mug{position:absolute;bottom:10px;right:17%;width:19px;height:24px;background:var(--pink);border:3px solid var(--ink)}
+#internship-game .mug:after{content:'';position:absolute;right:-10px;top:3px;width:7px;height:9px;border:2px solid var(--ink)}
+#internship-game .notebook{position:absolute;bottom:10px;left:8%;width:33px;height:7px;background:#e4d88d;border:2px solid var(--ink)}
+#internship-game .plant{position:absolute;bottom:61px;left:11%;width:25px;height:28px;background:#d4939e;border:2px solid var(--ink)}
+#internship-game .plant i{position:absolute;height:43px;width:5px;bottom:25px;left:9px;background:#466b5d}
+#internship-game .plant b{position:absolute;bottom:44px;left:-5px;width:20px;height:14px;background:#7ea485;box-shadow:17px -14px #7ea485}
+#internship-game .scene-caption{position:absolute;bottom:9px;width:100%;text-align:center;font:10px monospace}
+#internship-game .id-card{display:flex;gap:14px;align-items:center;margin:20px 0}
+#internship-game .id-icon{font:bold 18px monospace;background:var(--purple);border:var(--line);padding:12px}
+#internship-game .id-card span, #internship-game .id-card small{display:block;font:11px monospace}
+#internship-game .id-card strong{font-size:15px}
+#internship-game .id-card small{margin-top:3px;line-height:1.5}
+#internship-game .side-note{border-top:1px dashed #8293aa;padding-top:18px;margin-top:auto;font:15px/1.7 monospace}
+#internship-game .content-panel{padding:40px 38px;min-width:0}
+#internship-game .eyebrow{font:12px monospace;letter-spacing:1.5px;margin:0 0 19px}
+#internship-game .pill{display:inline-block;background:var(--green);border:1px solid var(--ink);padding:4px 10px;font:12px monospace;margin-bottom:22px}
+#internship-game h1{font:900 clamp(40px,5vw,64px)/1.03 var(--pixel-heading-font);letter-spacing:-3px;margin:0 0 20px;text-shadow:3px 3px #e4cde8}
+#internship-game h2{font:bold 29px/1.2 var(--pixel-heading-font);margin:0 0 18px;letter-spacing:-.6px}
+#internship-game h3{font:bold 19px/1.3 var(--pixel-heading-font);margin:25px 0 12px}
+#internship-game p{margin:0 0 20px}
+#internship-game .subtitle{font-size:21px;line-height:1.45;max-width:360px}
+#internship-game .muted{color:var(--pixel-muted);font-size:14px}
+#internship-game .actions, #internship-game .choices{display:grid;gap:14px;margin-top:28px}
+#internship-game .actions small{display:block;font-weight:normal;margin-top:4px;font-size:12px}
+#internship-game .text-button{background:none;border:0;box-shadow:none!important;padding:8px 0;font-size:14px;font-weight:normal;text-decoration:underline}
+#internship-game .window-footer{display:flex;justify-content:space-between;border-top:var(--line);padding:10px 16px;font:11px monospace;background:#f4f0e8}
+#internship-game .page-footer{max-width:1088px;margin:22px auto;display:flex;justify-content:space-between;font:11px monospace;padding:0 10px;color:#465b71}
+#internship-game .stats{display:grid;grid-template-columns:1fr 1fr;gap:17px 19px;border-top:1px dashed #8293aa;padding-top:18px}
+#internship-game .stat-label{font:13px monospace;display:flex;justify-content:space-between;margin-bottom:7px}
+#internship-game .track{height:13px;border:2px solid var(--ink);background:#fffdf5;overflow:hidden}
+#internship-game .fill{height:100%;background:var(--stat-color);transition:width .45s ease;position:relative}
+#internship-game .fill:after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent 0 8px,#26355355 8px 10px)}
+#internship-game .progress{display:flex;gap:7px;margin:0 0 25px}
+#internship-game .progress i{height:7px;flex:1;background:#e7e8ec;border:1px solid #637087}
+#internship-game .progress .done{background:#8d78b2}
+#internship-game .scenario{font-size:16px;line-height:1.8}
+#internship-game .choice{font-weight:normal;font-size:15px;display:flex;gap:12px;align-items:center}
+#internship-game .choice b{flex-shrink:0;border:1px solid var(--ink);padding:0 7px;font:14px/1.7 monospace;background:#fffdf5}
+#internship-game .choice:disabled{opacity:.5;box-shadow:none}
+#internship-game .choice.selected{opacity:1;background:var(--purple);box-shadow:none;transform:translate(3px,3px)}
+#internship-game .consequence{margin-top:25px;border-left:4px solid #9781b5;padding:0 0 0 16px;font-size:14px}
+#internship-game .deltas{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+#internship-game .delta{border:1px solid var(--ink);background:#eef1e5;padding:3px 6px;font:12px monospace}
+#internship-game .next{margin-top:20px;width:100%;background:var(--green)}
+#internship-game .profile-note, #internship-game .research-note{background:#f1edf8;border:1px solid #a49abb;padding:16px;font-size:14px}
+#internship-game .profile-values{display:grid;grid-template-columns:1fr 1fr;gap:10px;font:14px monospace;margin:22px 0}
+#internship-game .profile-values span{padding:9px;background:#e9edf0}
+#internship-game .timeline{padding:0;list-style:none;counter-reset:round}
+#internship-game .timeline li{position:relative;padding:0 0 17px 33px;border-left:1px solid #a8b4c6;margin-left:12px;font-size:13px;line-height:1.5}
+#internship-game .timeline li:before{counter-increment:round;content:counter(round);position:absolute;left:-12px;top:0;background:var(--purple);border:1px solid var(--ink);width:23px;text-align:center;font:12px/21px monospace}
+#internship-game .timeline small{display:block;color:#5b667a;font-size:11px}
+#internship-game .review-title{font-size:34px}
+#internship-game .review-actions{grid-template-columns:1fr;gap:12px}
+#internship-game .content-panel.enter{animation:internship-arrive .25s ease}
+@keyframes internship-arrive{from{opacity:.3;transform:translateY(6px)}
+to{opacity:1;transform:translateY(0)}
+}
+#internship-game [hidden]{display:none!important}
+@container internship (min-width:850px){#internship-game .review .scene-panel{align-self:start;position:sticky;top:15px;border-bottom:var(--line)}
+#internship-game .review .game-layout{align-items:start}
+#internship-game .review .content-panel{border-left:var(--line);margin-left:-2px}
+}
+@container internship (max-width:760px){#internship-game .masthead{margin:18px auto}
+#internship-game .masthead>span{display:none}
+#internship-game .desktop{margin:0 14px;box-shadow:5px 5px var(--ink)}
+#internship-game .game-layout{grid-template-columns:1fr}
+#internship-game .scene-panel{border-right:0;border-bottom:var(--line);padding:17px}
+#internship-game .illustration{height:215px}
+#internship-game .office-window{height:115px;top:15px;width:56%}
+#internship-game .avatar{bottom:45px}
+#internship-game .desk{bottom:32px}
+#internship-game .scene-caption{bottom:5px;font-size:9px}
+#internship-game .scene-label{margin-bottom:10px}
+#internship-game .id-card{margin:14px 0 0}
+#internship-game .side-note{display:none}
+#internship-game .stats{margin-top:15px;padding-top:15px;gap:12px 20px}
+#internship-game .content-panel{padding:27px 22px}
+#internship-game h1{font-size:clamp(36px,12cqw,50px)}
+#internship-game .subtitle{font-size:19px}
+#internship-game .page-footer{display:block;margin:20px 14px}
+#internship-game .page-footer span{display:none}
+#internship-game .window-footer{font-size:9px;padding:10px}
+#internship-game .playing .illustration{height:160px}
+#internship-game .playing .office-window{height:90px}
+#internship-game .playing .wall-note{top:65px}
+#internship-game .playing .avatar{transform:scale(.8);transform-origin:bottom}
+#internship-game .playing .scene-caption{display:none}
+#internship-game .playing .id-card{display:none}
+#internship-game .playing .scene-label{font-size:10px}
+#internship-game .choices{margin-top:20px}
+#internship-game .review .illustration{display:none}
+}
+@media(prefers-reduced-motion:reduce){#internship-game *, #internship-game *:before, #internship-game *:after{transition:none!important;animation:none!important}
+}
+
+
+#internship-game .story-transition h3 { margin: 0 0 12px; }
+#internship-game .story-transition p { margin: 0; }
